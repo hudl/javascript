@@ -1699,7 +1699,7 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
     }
     ```
 
-  - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your filename should be exactly the name of the class.
+  - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your filename should be a hyphenated version of the class name.
     ```javascript
     // file contents
     class CheckBox {
@@ -1715,7 +1715,7 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
     import CheckBox from './check_box';
 
     // good
-    import CheckBox from './CheckBox';
+    import CheckBox from './check-box';
     ```
 
   - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your filename should be identical to your function's name.
