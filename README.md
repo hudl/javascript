@@ -1718,7 +1718,7 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
     import CheckBox from './check-box';
     ```
 
-  - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+  - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your filename should be a hyphenated version of your function's name.
 
     ```javascript
     function makeStyleGuide() {
