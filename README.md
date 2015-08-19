@@ -1247,7 +1247,7 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
 
 ## Whitespace
 
-  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 2 spaces.
+  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 4 spaces.
 
     ```javascript
     // bad
