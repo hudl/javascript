@@ -8,6 +8,7 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
 
 ## Table of Contents
 
+  1. [FlowType (strong typing)](#flow)
   1. [Types](#types)
   1. [References](#references)
   1. [Objects](#objects)
@@ -44,6 +45,41 @@ Forked from [AirBNB's style guide](https://github.com/airbnb/javascript)
   1. [Chat With Us About Javascript](#chat-with-us-about-javascript)
   1. [Contributors](#contributors)
   1. [License](#license)
+
+## FlowType (strong types)
+
+  - [1.1](#1.1) Use [FlowType](http://flowtype.org/) tags in every situation possible. It requires a pre-processor to strip the tags out before running in a browser. We suggest [Babel](http://babeljs.io/). 
+
+  > FlowType helps find nested bugs not always easily surfaced by interaction.
+  
+  ```javascript
+  function addNumbers(num1: number, num2: number) : number {
+    return num1 + num2;
+  }
+  
+  addNumbers(1, '1'); // returns "11", but would throw an error from Flow
+  ```
+
+  - [1.2](#1.2) Function return types should be spaced evenly on all sides.
+
+    ```javascript
+    function addNumbers(...args) : number {}
+    const addNumbers = (...args) : number => {}
+    ```
+    
+  - [1.3](#1.3) Variables should have the `:` directly after the name.
+
+    ```javascript
+    const location: number = 34;
+    let name: string = 'Hudl';
+    ```
+
+  - [1.4](#1.4) Function arguments should be treated the same as variables.
+
+    ```javascript
+    function addNumbers(...args: Array<number>) : string {}
+    const getUserName = (user: Object) : string => {}
+    ```
 
 ## Types
 
