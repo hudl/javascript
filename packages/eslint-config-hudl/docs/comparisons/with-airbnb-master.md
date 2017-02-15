@@ -81,7 +81,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     ecmaFeatures.jsx
   - [<ins>true</ins>]
 -     parser
-  - [<del>&quot;C:\\hudl\\javascript\\packages\\eslint-config-hudl\\node_modules\\babel-eslint\\index.js&quot;</del>]
+  - [<del>&quot;babel-eslint&quot;</del>]
 -     plugins.0
   - [&quot;react&quot;]
   - [&quot;import&quot;]
