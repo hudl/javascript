@@ -23,7 +23,7 @@ function ConfigDiff() {
 
 function normalizeRules(config) {
   _.each(config.rules, function(val, key, rules) {
-    if (_.isNumber(val)) {
+    if (val.constructor !== Array) {
       rules[key] = [val]; // eslint-disable-line no-param-reassign
     }
   });
@@ -38,10 +38,6 @@ function diffRules(ourConfig, theirConfig, options) {
     let changeType;
     let isKnown;
     let isIgnorable = false;
-
-    function ensureArray(value) {
-      return value.constructor === Array ? value : [value];
-    }
 
     function diffValueChanges(thisSet, otherSet, flag) {
       return thisSet.map(function(value, i) {
@@ -59,7 +55,7 @@ function diffRules(ourConfig, theirConfig, options) {
       changeType = 'added';
       isKnown = ruleOptions.added && _.isEqual(ruleOptions.added[change.path[0]], change.rhs);
       valueArrays = [
-        ensureArray(change.rhs).map(function(value) {
+        change.rhs.map(function(value) {
           return {
             rawValue: value,
             added: true,
@@ -72,7 +68,7 @@ function diffRules(ourConfig, theirConfig, options) {
       // The rule has been removed, but it was disabled anyway
       isIgnorable = change.lhs[0] === 0;
       valueArrays = [
-        ensureArray(change.lhs).map(function(value) {
+        change.lhs.map(function(value) {
           return {
             rawValue: value,
             removed: true,
@@ -80,8 +76,8 @@ function diffRules(ourConfig, theirConfig, options) {
         }),
       ];
     } else {
-      const prevValue = ensureArray(ourConfig.rules[change.path[0]]);
-      const newValue = ensureArray(theirConfig.rules[change.path[0]]);
+      const prevValue = ourConfig.rules[change.path[0]];
+      const newValue = theirConfig.rules[change.path[0]];
       changeType = 'edited';
       isKnown = ruleOptions.edited && _.isEqual(ruleOptions.edited[change.path[0]], newValue);
       // Rule was and still is disabled, so we can ignore it's settings
