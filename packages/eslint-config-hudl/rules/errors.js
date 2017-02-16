@@ -1,60 +1,60 @@
 module.exports = {
   'rules': {
     // disallow trailing commas in object literals
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': ['error', 'always-multiline'],
     // disallow assignment in conditional expressions
-    'no-cond-assign': [2, 'always'],
+    'no-cond-assign': ['error', 'always'],
     // disallow use of console
-    'no-console': 1,
+    'no-console': 'warn',
     // disallow use of constant expressions in conditions
-    'no-constant-condition': 1,
+    'no-constant-condition': 'warn',
     // disallow control characters in regular expressions
-    'no-control-regex': 0,
+    'no-control-regex': 'off',
     // disallow use of debugger
-    'no-debugger': 1,
+    'no-debugger': 'warn',
     // disallow duplicate arguments in functions
-    'no-dupe-args': 0,
+    'no-dupe-args': 'off',
     // disallow duplicate keys when creating object literals
-    'no-dupe-keys': 2,
+    'no-dupe-keys': 'error',
     // disallow a duplicate case label.
-    'no-duplicate-case': 2,
+    'no-duplicate-case': 'error',
     // disallow the use of empty character classes in regular expressions
-    'no-empty-character-class': 0,
+    'no-empty-character-class': 'off',
     // disallow empty statements
-    'no-empty': 2,
+    'no-empty': 'error',
     // disallow assigning to the exception in a catch block
-    'no-ex-assign': 2,
+    'no-ex-assign': 'error',
     // disallow double-negation boolean casts in a boolean context
-    'no-extra-boolean-cast': 0,
+    'no-extra-boolean-cast': 'off',
     // disallow unnecessary parentheses
-    'no-extra-parens': [2, 'functions'],
+    'no-extra-parens': ['error', 'functions'],
     // disallow unnecessary semicolons
-    'no-extra-semi': 2,
+    'no-extra-semi': 'error',
     // disallow overwriting functions written as function declarations
-    'no-func-assign': 2,
+    'no-func-assign': 'error',
     // disallow function or variable declarations in nested blocks
-    'no-inner-declarations': 2,
+    'no-inner-declarations': 'error',
     // disallow invalid regular expression strings in the RegExp constructor
-    'no-invalid-regexp': 2,
+    'no-invalid-regexp': 'error',
     // disallow irregular whitespace outside of strings and comments
-    'no-irregular-whitespace': 2,
+    'no-irregular-whitespace': 'error',
     // disallow negation of the left operand of an in expression
-    'no-negated-in-lhs': 0,
+    'no-negated-in-lhs': 'off',
     // disallow the use of object properties of the global object (Math and JSON) as functions
-    'no-obj-calls': 2,
+    'no-obj-calls': 'error',
     // disallow multiple spaces in a regular expression literal
-    'no-regex-spaces': 0,
+    'no-regex-spaces': 'off',
     // disallow sparse arrays
-    'no-sparse-arrays': 2,
+    'no-sparse-arrays': 'error',
     // disallow unreachable statements after a return, throw, continue, or break statement
-    'no-unreachable': 2,
+    'no-unreachable': 'error',
     // disallow comparisons with the value NaN
-    'use-isnan': 2,
+    'use-isnan': 'error',
     // ensure JSDoc comments are valid
-    'valid-jsdoc': 0,
+    'valid-jsdoc': 'off',
     // ensure that the results of typeof are compared against a valid string
-    'valid-typeof': 0,
+    'valid-typeof': 'off',
     // Avoid code that looks like two expressions but is actually one
-    'no-unexpected-multiline': 0,
+    'no-unexpected-multiline': 'off',
   },
 };
