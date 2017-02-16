@@ -1,3 +1,4 @@
+'use strict';
 const path = require('path');
 const request = require('request-promise');
 const fs = require('fs-extra');
@@ -22,7 +23,7 @@ function ConfigDiff() {
 
 function normalizeRules(config) {
   _.each(config.rules, function(val, key, rules) {
-    if (_.isNumber(val)) {
+    if (val.constructor !== Array) {
       rules[key] = [val]; // eslint-disable-line no-param-reassign
     }
   });
@@ -33,10 +34,10 @@ function diffRules(ourConfig, theirConfig, options) {
   const ruleOptions = options.rules;
 
   const ruleDifferences = (diff(ourConfig.rules, theirConfig.rules) || []).map(function(change) {
-    var valueArrays;
-    var changeType;
-    var isKnown;
-    var isIgnorable = false;
+    let valueArrays;
+    let changeType;
+    let isKnown;
+    let isIgnorable = false;
 
     function diffValueChanges(thisSet, otherSet, flag) {
       return thisSet.map(function(value, i) {
@@ -77,7 +78,6 @@ function diffRules(ourConfig, theirConfig, options) {
     } else {
       const prevValue = ourConfig.rules[change.path[0]];
       const newValue = theirConfig.rules[change.path[0]];
-
       changeType = 'edited';
       isKnown = ruleOptions.edited && _.isEqual(ruleOptions.edited[change.path[0]], newValue);
       // Rule was and still is disabled, so we can ignore it's settings
@@ -137,7 +137,9 @@ function diffEverythingElse(ourConfig, theirConfig /* , options */ ) {
     return newConfig;
   }
 
-  return (diff(cleanConfig(ourConfig), cleanConfig(theirConfig)) || []).map(function(change) {
+  const ourCleanConfig = _.omit(cleanConfig(ourConfig), 'globals');
+  const theirCleanConfig = _.omit(cleanConfig(theirConfig), 'globals');
+  return (diff(ourCleanConfig, theirCleanConfig) || []).map(function(change) {
     const isKnown = false;
     const changeType = {
       N: 'added',
@@ -147,7 +149,7 @@ function diffEverythingElse(ourConfig, theirConfig /* , options */ ) {
     }[change.kind];
 
     function createValueArray(from, to, prop) {
-      var value = {
+      const value = {
         rawValue: deepProperty.get(from, prop),
       };
       if (value.rawValue === undefined) {
@@ -284,7 +286,7 @@ ConfigDiff.prototype._loadConfigs = function(configPaths) {
 };
 
 ConfigDiff.prototype._resolveFilePath = function(configPath) {
-  var url;
+  let url;
   if (/^https?:/.test(configPath)) {
     url = configPath;
     if (/^https:\/\/github.com/.test(configPath)) {
@@ -329,10 +331,28 @@ ConfigDiff.prototype._resolveFilePath = function(configPath) {
 };
 
 ConfigDiff.prototype._loadConfig = function(configFilePath) {
-  return new Config({
+  const config = new Config({
     configFile: configFilePath,
     useEslintrc: false,
   }).getConfig();
+
+  // eslint resolves the parser option into an absolute file path. This isn't very helpful
+  // to us. So we have to manually 'unresolve' it back to a module name if its a file path.
+  // Ref to the resolving code:
+  // https://github.com/eslint/eslint/blob/616611afe19da5380344042fc73c7b91e59375cc/lib/config/config-file.js#L517
+  if (config.parser) {
+    const parserModule = this._moduleFromFilePath(config.parser);
+    config.parser = parserModule || config.parser;
+  }
+  return config;
+};
+
+ConfigDiff.prototype._moduleFromFilePath = function(filePath) {
+  if (!filePath) return null;
+  const segments = filePath.split(path.sep);
+  const index = segments.lastIndexOf('node_modules');
+  if (index === -1) return null;
+  return segments[index + 1];
 };
 
 module.exports = ConfigDiff;

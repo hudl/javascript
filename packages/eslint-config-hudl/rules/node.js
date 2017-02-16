@@ -4,20 +4,20 @@ module.exports = {
   },
   'rules': {
     // enforce return after a callback
-    'callback-return': 0,
+    'callback-return': 'off',
     // enforces error handling in callbacks (node environment)
-    'handle-callback-err': 0,
+    'handle-callback-err': 'off',
     // disallow mixing regular variable and require declarations
-    'no-mixed-requires': [0, false],
+    'no-mixed-requires': ['off', false],
     // disallow use of new operator with the require function
-    'no-new-require': 0,
+    'no-new-require': 'off',
     // disallow string concatenation with __dirname and __filename
-    'no-path-concat': 0,
+    'no-path-concat': 'off',
     // disallow process.exit()
-    'no-process-exit': 0,
+    'no-process-exit': 'off',
     // restrict usage of specified node modules
-    'no-restricted-modules': 0,
+    'no-restricted-modules': 'off',
     // disallow use of synchronous methods (off by default)
-    'no-sync': 0,
+    'no-sync': 'off',
   },
 };
