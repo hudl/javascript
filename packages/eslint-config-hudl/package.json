@@ -94,5 +94,8 @@
   },
   "peerDependencies": {
     "eslint": "^3.0.0"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^1.5.0"
   }
 }

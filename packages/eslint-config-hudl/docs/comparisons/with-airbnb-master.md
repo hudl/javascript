@@ -153,7 +153,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     import/no-dynamic-require
   - [<ins>&quot;error&quot;</ins>]
 -     import/no-extraneous-dependencies
-  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;devDependencies&quot;:[&quot;test/**&quot;,&quot;tests/**&quot;,&quot;spec/**&quot;,&quot;**/__tests__/**&quot;,&quot;test.js&quot;,&quot;test-*.js&quot;,&quot;**/*.test.js&quot;,&quot;**/webpack.config.js&quot;,&quot;**/webpack.config.*.js&quot;,&quot;**/rollup.config.js&quot;,&quot;**/gulpfile.js&quot;,&quot;**/gulpfile.*.js&quot;,&quot;**/Gruntfile&quot;],&quot;optionalDependencies&quot;:false}</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;devDependencies&quot;:[&quot;test/**&quot;,&quot;tests/**&quot;,&quot;spec/**&quot;,&quot;**/__tests__/**&quot;,&quot;test.js&quot;,&quot;test-*.js&quot;,&quot;**/*.test.js&quot;,&quot;**/*.spec.js&quot;,&quot;**/webpack.config.js&quot;,&quot;**/webpack.config.*.js&quot;,&quot;**/rollup.config.js&quot;,&quot;**/gulpfile.js&quot;,&quot;**/gulpfile.*.js&quot;,&quot;**/Gruntfile&quot;],&quot;optionalDependencies&quot;:false}</ins>]
 -     import/no-internal-modules
   - [<ins>&quot;off&quot;</ins>, <ins>{&quot;allow&quot;:[]}</ins>]
 -     import/no-mutable-exports
@@ -256,6 +256,9 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [no-case-declarations](http://eslint.org/docs/rules/no-case-declarations.html)
   - [<ins>&quot;error&quot;</ins>]
 - 
+    [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero.html)
+  - [<ins>&quot;off&quot;</ins>]
+- 
     [no-confusing-arrow](http://eslint.org/docs/rules/no-confusing-arrow.html)
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowParens&quot;:true}</ins>]
 - 
@@ -354,6 +357,9 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-whitespace-before-property](http://eslint.org/docs/rules/no-whitespace-before-property.html)
   - [<ins>&quot;error&quot;</ins>]
+- 
+    [nonblock-statement-body-position](http://eslint.org/docs/rules/nonblock-statement-body-position.html)
+  - [<ins>&quot;off&quot;</ins>]
 - 
     [object-curly-newline](http://eslint.org/docs/rules/object-curly-newline.html)
   - [<ins>&quot;off&quot;</ins>, <ins>{&quot;ObjectExpression&quot;:{&quot;minProperties&quot;:0,&quot;multiline&quot;:true},&quot;ObjectPattern&quot;:{&quot;minProperties&quot;:0,&quot;multiline&quot;:true}}</ins>]
@@ -635,7 +641,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-param-reassign](http://eslint.org/docs/rules/no-param-reassign.html)
   - [&quot;error&quot;]
-  - [&quot;error&quot;, <ins>{&quot;props&quot;:true}</ins>]
+  - [&quot;error&quot;, <ins>{&quot;props&quot;:true,&quot;ignorePropertyModificationsFor&quot;:[&quot;acc&quot;,&quot;e&quot;,&quot;ctx&quot;,&quot;req&quot;,&quot;request&quot;,&quot;res&quot;,&quot;response&quot;,&quot;$scope&quot;]}</ins>]
 - 
     [no-path-concat](http://eslint.org/docs/rules/no-path-concat.html)
   - [<del>&quot;off&quot;</del>]
@@ -675,7 +681,15 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions.html)
   - [<del>&quot;off&quot;</del>]
-  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowShortCircuit&quot;:false,&quot;allowTernary&quot;:false}</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowShortCircuit&quot;:false,&quot;allowTernary&quot;:false,&quot;allowTaggedTemplates&quot;:false}</ins>]
+- 
+    [no-unused-vars](http://eslint.org/docs/rules/no-unused-vars.html)
+  - [&quot;error&quot;, <del>{&quot;vars&quot;:&quot;local&quot;,&quot;args&quot;:&quot;after-used&quot;}</del>]
+  - [&quot;error&quot;, <ins>{&quot;vars&quot;:&quot;local&quot;,&quot;args&quot;:&quot;after-used&quot;,&quot;ignoreRestSiblings&quot;:true}</ins>]
+- 
+    [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define.html)
+  - [&quot;error&quot;]
+  - [&quot;error&quot;, <ins>{&quot;functions&quot;:true,&quot;classes&quot;:true,&quot;variables&quot;:true}</ins>]
 - 
     [no-void](http://eslint.org/docs/rules/no-void.html)
   - [<del>&quot;off&quot;</del>]
