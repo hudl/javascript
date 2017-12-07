@@ -1,3 +1,6 @@
+### 5.0.1
+- Update references to http://npm.thorhudl.com to reference new Nexus server.
+
 5.0.0 / 2017-02-14 (Hudl)
 ==================
 - [breaking] Updated eslint-config-hudl dependencies
