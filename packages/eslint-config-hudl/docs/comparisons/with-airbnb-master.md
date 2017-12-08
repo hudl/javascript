@@ -81,7 +81,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     ecmaFeatures.jsx
   - [<ins>true</ins>]
 -     parser
-  - [<del>&quot;babel-eslint&quot;</del>]
+  - [&quot;babel-eslint&quot;]
 -     plugins.0
   - [&quot;react&quot;]
   - [&quot;import&quot;]
@@ -99,8 +99,14 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 
 #### Added rules
 - 
+    [array-bracket-newline](http://eslint.org/docs/rules/array-bracket-newline.html)
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;multiline&quot;:true,&quot;minItems&quot;:3}</ins>]
+- 
     [array-callback-return](http://eslint.org/docs/rules/array-callback-return.html)
   - [<ins>&quot;error&quot;</ins>]
+- 
+    [array-element-newline](http://eslint.org/docs/rules/array-element-newline.html)
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;multiline&quot;:true,&quot;minItems&quot;:3}</ins>]
 - 
     [block-spacing](http://eslint.org/docs/rules/block-spacing.html)
   - [<ins>&quot;error&quot;</ins>, <ins>&quot;always&quot;</ins>]
@@ -111,11 +117,17 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [class-methods-use-this](http://eslint.org/docs/rules/class-methods-use-this.html)
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;exceptMethods&quot;:[&quot;render&quot;,&quot;getInitialState&quot;,&quot;getDefaultProps&quot;,&quot;getChildContext&quot;,&quot;componentWillMount&quot;,&quot;componentDidMount&quot;,&quot;componentWillReceiveProps&quot;,&quot;shouldComponentUpdate&quot;,&quot;componentWillUpdate&quot;,&quot;componentDidUpdate&quot;,&quot;componentWillUnmount&quot;]}</ins>]
 - 
+    [for-direction](http://eslint.org/docs/rules/for-direction.html)
+  - [<ins>&quot;off&quot;</ins>]
+- 
     [func-call-spacing](http://eslint.org/docs/rules/func-call-spacing.html)
   - [<ins>&quot;error&quot;</ins>, <ins>&quot;never&quot;</ins>]
 - 
     [func-name-matching](http://eslint.org/docs/rules/func-name-matching.html)
   - [<ins>&quot;off&quot;</ins>, <ins>&quot;always&quot;</ins>, <ins>{&quot;includeCommonJSModuleExports&quot;:false}</ins>]
+- 
+    [getter-return](http://eslint.org/docs/rules/getter-return.html)
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;allowImplicit&quot;:true}</ins>]
 - 
     [global-require](http://eslint.org/docs/rules/global-require.html)
   - [<ins>&quot;error&quot;</ins>]
@@ -144,6 +156,8 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;error&quot;</ins>]
 -     import/no-amd
   - [<ins>&quot;error&quot;</ins>]
+-     import/no-anonymous-default-export
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;allowArray&quot;:false,&quot;allowArrowFunction&quot;:false,&quot;allowAnonymousClass&quot;:false,&quot;allowAnonymousFunction&quot;:false,&quot;allowLiteral&quot;:false,&quot;allowObject&quot;:false}</ins>]
 -     import/no-commonjs
   - [<ins>&quot;off&quot;</ins>]
 -     import/no-deprecated
@@ -153,7 +167,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     import/no-dynamic-require
   - [<ins>&quot;error&quot;</ins>]
 -     import/no-extraneous-dependencies
-  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;devDependencies&quot;:[&quot;test/**&quot;,&quot;tests/**&quot;,&quot;spec/**&quot;,&quot;**/__tests__/**&quot;,&quot;test.js&quot;,&quot;test-*.js&quot;,&quot;**/*.test.js&quot;,&quot;**/webpack.config.js&quot;,&quot;**/webpack.config.*.js&quot;,&quot;**/rollup.config.js&quot;,&quot;**/gulpfile.js&quot;,&quot;**/gulpfile.*.js&quot;,&quot;**/Gruntfile&quot;],&quot;optionalDependencies&quot;:false}</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;devDependencies&quot;:[&quot;test/**&quot;,&quot;tests/**&quot;,&quot;spec/**&quot;,&quot;**/__tests__/**&quot;,&quot;test.{js,jsx}&quot;,&quot;test-*.{js,jsx}&quot;,&quot;**/*.{test,spec}.{js,jsx}&quot;,&quot;**/jest.config.js&quot;,&quot;**/webpack.config.js&quot;,&quot;**/webpack.config.*.js&quot;,&quot;**/rollup.config.js&quot;,&quot;**/rollup.config.*.js&quot;,&quot;**/gulpfile.js&quot;,&quot;**/gulpfile.*.js&quot;,&quot;**/Gruntfile{,.js}&quot;,&quot;**/protractor.conf.*.js&quot;],&quot;optionalDependencies&quot;:false}</ins>]
 -     import/no-internal-modules
   - [<ins>&quot;off&quot;</ins>, <ins>{&quot;allow&quot;:[]}</ins>]
 -     import/no-mutable-exports
@@ -253,8 +267,14 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [no-await-in-loop](http://eslint.org/docs/rules/no-await-in-loop.html)
   - [<ins>&quot;error&quot;</ins>]
 - 
+    [no-buffer-constructor](http://eslint.org/docs/rules/no-buffer-constructor.html)
+  - [<ins>&quot;off&quot;</ins>]
+- 
     [no-case-declarations](http://eslint.org/docs/rules/no-case-declarations.html)
   - [<ins>&quot;error&quot;</ins>]
+- 
+    [no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero.html)
+  - [<ins>&quot;off&quot;</ins>]
 - 
     [no-confusing-arrow](http://eslint.org/docs/rules/no-confusing-arrow.html)
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowParens&quot;:true}</ins>]
@@ -299,7 +319,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;error&quot;</ins>]
 - 
     [no-restricted-globals](http://eslint.org/docs/rules/no-restricted-globals.html)
-  - [<ins>&quot;off&quot;</ins>]
+  - [<ins>&quot;off&quot;</ins>, <ins>&quot;addEventListener&quot;</ins>, <ins>&quot;blur&quot;</ins>, <ins>&quot;close&quot;</ins>, <ins>&quot;closed&quot;</ins>, <ins>&quot;confirm&quot;</ins>, <ins>&quot;defaultStatus&quot;</ins>, <ins>&quot;event&quot;</ins>, <ins>&quot;external&quot;</ins>, <ins>&quot;defaultstatus&quot;</ins>, <ins>&quot;find&quot;</ins>, <ins>&quot;focus&quot;</ins>, <ins>&quot;frameElement&quot;</ins>, <ins>&quot;frames&quot;</ins>, <ins>&quot;history&quot;</ins>, <ins>&quot;innerHeight&quot;</ins>, <ins>&quot;innerWidth&quot;</ins>, <ins>&quot;length&quot;</ins>, <ins>&quot;location&quot;</ins>, <ins>&quot;locationbar&quot;</ins>, <ins>&quot;menubar&quot;</ins>, <ins>&quot;moveBy&quot;</ins>, <ins>&quot;moveTo&quot;</ins>, <ins>&quot;name&quot;</ins>, <ins>&quot;onblur&quot;</ins>, <ins>&quot;onerror&quot;</ins>, <ins>&quot;onfocus&quot;</ins>, <ins>&quot;onload&quot;</ins>, <ins>&quot;onresize&quot;</ins>, <ins>&quot;onunload&quot;</ins>, <ins>&quot;open&quot;</ins>, <ins>&quot;opener&quot;</ins>, <ins>&quot;opera&quot;</ins>, <ins>&quot;outerHeight&quot;</ins>, <ins>&quot;outerWidth&quot;</ins>, <ins>&quot;pageXOffset&quot;</ins>, <ins>&quot;pageYOffset&quot;</ins>, <ins>&quot;parent&quot;</ins>, <ins>&quot;print&quot;</ins>, <ins>&quot;removeEventListener&quot;</ins>, <ins>&quot;resizeBy&quot;</ins>, <ins>&quot;resizeTo&quot;</ins>, <ins>&quot;screen&quot;</ins>, <ins>&quot;screenLeft&quot;</ins>, <ins>&quot;screenTop&quot;</ins>, <ins>&quot;screenX&quot;</ins>, <ins>&quot;screenY&quot;</ins>, <ins>&quot;scroll&quot;</ins>, <ins>&quot;scrollbars&quot;</ins>, <ins>&quot;scrollBy&quot;</ins>, <ins>&quot;scrollTo&quot;</ins>, <ins>&quot;scrollX&quot;</ins>, <ins>&quot;scrollY&quot;</ins>, <ins>&quot;self&quot;</ins>, <ins>&quot;status&quot;</ins>, <ins>&quot;statusbar&quot;</ins>, <ins>&quot;stop&quot;</ins>, <ins>&quot;toolbar&quot;</ins>, <ins>&quot;top&quot;</ins>]
 - 
     [no-restricted-imports](http://eslint.org/docs/rules/no-restricted-imports.html)
   - [<ins>&quot;off&quot;</ins>]
@@ -308,7 +328,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;object&quot;:&quot;arguments&quot;,&quot;property&quot;:&quot;callee&quot;,&quot;message&quot;:&quot;arguments.callee is deprecated&quot;}</ins>, <ins>{&quot;property&quot;:&quot;__defineGetter__&quot;,&quot;message&quot;:&quot;Please use Object.defineProperty instead.&quot;}</ins>, <ins>{&quot;property&quot;:&quot;__defineSetter__&quot;,&quot;message&quot;:&quot;Please use Object.defineProperty instead.&quot;}</ins>, <ins>{&quot;object&quot;:&quot;Math&quot;,&quot;property&quot;:&quot;pow&quot;,&quot;message&quot;:&quot;Use the exponentiation operator (**) instead.&quot;}</ins>]
 - 
     [no-restricted-syntax](http://eslint.org/docs/rules/no-restricted-syntax.html)
-  - [<ins>&quot;error&quot;</ins>, <ins>&quot;ForInStatement&quot;</ins>, <ins>&quot;ForOfStatement&quot;</ins>, <ins>&quot;LabeledStatement&quot;</ins>, <ins>&quot;WithStatement&quot;</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;selector&quot;:&quot;ForInStatement&quot;,&quot;message&quot;:&quot;for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.&quot;}</ins>, <ins>{&quot;selector&quot;:&quot;ForOfStatement&quot;,&quot;message&quot;:&quot;iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.&quot;}</ins>, <ins>{&quot;selector&quot;:&quot;LabeledStatement&quot;,&quot;message&quot;:&quot;Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.&quot;}</ins>, <ins>{&quot;selector&quot;:&quot;WithStatement&quot;,&quot;message&quot;:&quot;&#x60;with&#x60; is disallowed in strict mode because it makes code impossible to predict and optimize.&quot;}</ins>]
 - 
     [no-return-await](http://eslint.org/docs/rules/no-return-await.html)
   - [<ins>&quot;error&quot;</ins>]
@@ -355,8 +375,11 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [no-whitespace-before-property](http://eslint.org/docs/rules/no-whitespace-before-property.html)
   - [<ins>&quot;error&quot;</ins>]
 - 
+    [nonblock-statement-body-position](http://eslint.org/docs/rules/nonblock-statement-body-position.html)
+  - [<ins>&quot;off&quot;</ins>]
+- 
     [object-curly-newline](http://eslint.org/docs/rules/object-curly-newline.html)
-  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;ObjectExpression&quot;:{&quot;minProperties&quot;:0,&quot;multiline&quot;:true},&quot;ObjectPattern&quot;:{&quot;minProperties&quot;:0,&quot;multiline&quot;:true}}</ins>]
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;ObjectExpression&quot;:{&quot;minProperties&quot;:3,&quot;multiline&quot;:true,&quot;consistent&quot;:true},&quot;ObjectPattern&quot;:{&quot;minProperties&quot;:3,&quot;multiline&quot;:true,&quot;consistent&quot;:true}}</ins>]
 - 
     [object-property-newline](http://eslint.org/docs/rules/object-property-newline.html)
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowMultiplePropertiesPerLine&quot;:true}</ins>]
@@ -364,8 +387,11 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [one-var-declaration-per-line](http://eslint.org/docs/rules/one-var-declaration-per-line.html)
   - [<ins>&quot;error&quot;</ins>, <ins>&quot;always&quot;</ins>]
 - 
+    [padding-line-between-statements](http://eslint.org/docs/rules/padding-line-between-statements.html)
+  - [<ins>&quot;off&quot;</ins>]
+- 
     [prefer-destructuring](http://eslint.org/docs/rules/prefer-destructuring.html)
-  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;array&quot;:true,&quot;object&quot;:true}</ins>, <ins>{&quot;enforceForRenamedProperties&quot;:false}</ins>]
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;VariableDeclarator&quot;:{&quot;array&quot;:false,&quot;object&quot;:true},&quot;AssignmentExpression&quot;:{&quot;array&quot;:true,&quot;object&quot;:true}}</ins>, <ins>{&quot;enforceForRenamedProperties&quot;:false}</ins>]
 - 
     [prefer-numeric-literals](http://eslint.org/docs/rules/prefer-numeric-literals.html)
   - [<ins>&quot;error&quot;</ins>]
@@ -433,11 +459,17 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
     [rest-spread-spacing](http://eslint.org/docs/rules/rest-spread-spacing.html)
   - [<ins>&quot;error&quot;</ins>, <ins>&quot;never&quot;</ins>]
 - 
+    [semi-style](http://eslint.org/docs/rules/semi-style.html)
+  - [<ins>&quot;off&quot;</ins>, <ins>&quot;last&quot;</ins>]
+- 
     [sort-imports](http://eslint.org/docs/rules/sort-imports.html)
   - [<ins>&quot;off&quot;</ins>, <ins>{&quot;ignoreCase&quot;:false,&quot;ignoreMemberSort&quot;:false,&quot;memberSyntaxSortOrder&quot;:[&quot;none&quot;,&quot;all&quot;,&quot;multiple&quot;,&quot;single&quot;]}</ins>]
 - 
     [sort-keys](http://eslint.org/docs/rules/sort-keys.html)
   - [<ins>&quot;off&quot;</ins>, <ins>&quot;asc&quot;</ins>, <ins>{&quot;caseSensitive&quot;:false,&quot;natural&quot;:true}</ins>]
+- 
+    [switch-colon-spacing](http://eslint.org/docs/rules/switch-colon-spacing.html)
+  - [<ins>&quot;off&quot;</ins>, <ins>{&quot;after&quot;:true,&quot;before&quot;:false}</ins>]
 - 
     [symbol-description](http://eslint.org/docs/rules/symbol-description.html)
   - [<ins>&quot;error&quot;</ins>]
@@ -591,7 +623,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-extra-parens](http://eslint.org/docs/rules/no-extra-parens.html)
   - [<del>&quot;error&quot;</del>, <del>&quot;functions&quot;</del>]
-  - [<ins>&quot;off&quot;</ins>, <ins>&quot;all&quot;</ins>, <ins>{&quot;conditionalAssign&quot;:true,&quot;nestedBinaryExpressions&quot;:false,&quot;returnAssign&quot;:false}</ins>]
+  - [<ins>&quot;off&quot;</ins>, <ins>&quot;all&quot;</ins>, <ins>{&quot;conditionalAssign&quot;:true,&quot;nestedBinaryExpressions&quot;:false,&quot;returnAssign&quot;:false,&quot;ignoreJSX&quot;:&quot;all&quot;,&quot;enforceForArrowConditionals&quot;:false}</ins>]
 - 
     [no-implicit-coercion](http://eslint.org/docs/rules/no-implicit-coercion.html)
   - [&quot;off&quot;]
@@ -619,7 +651,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-multi-spaces](http://eslint.org/docs/rules/no-multi-spaces.html)
   - [<del>&quot;off&quot;</del>]
-  - [<ins>&quot;error&quot;</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{}</ins>]
 - 
     [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines.html)
   - [&quot;error&quot;, <del>{&quot;max&quot;:2}</del>]
@@ -635,7 +667,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-param-reassign](http://eslint.org/docs/rules/no-param-reassign.html)
   - [&quot;error&quot;]
-  - [&quot;error&quot;, <ins>{&quot;props&quot;:true}</ins>]
+  - [&quot;error&quot;, <ins>{&quot;props&quot;:true,&quot;ignorePropertyModificationsFor&quot;:[&quot;acc&quot;,&quot;e&quot;,&quot;ctx&quot;,&quot;req&quot;,&quot;request&quot;,&quot;res&quot;,&quot;response&quot;,&quot;$scope&quot;]}</ins>]
 - 
     [no-path-concat](http://eslint.org/docs/rules/no-path-concat.html)
   - [<del>&quot;off&quot;</del>]
@@ -649,9 +681,17 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
 - 
+    [no-return-assign](http://eslint.org/docs/rules/no-return-assign.html)
+  - [&quot;error&quot;]
+  - [&quot;error&quot;, <ins>&quot;always&quot;</ins>]
+- 
     [no-this-before-super](http://eslint.org/docs/rules/no-this-before-super.html)
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
+- 
+    [no-trailing-spaces](http://eslint.org/docs/rules/no-trailing-spaces.html)
+  - [&quot;error&quot;]
+  - [&quot;error&quot;, <ins>{&quot;skipBlankLines&quot;:false}</ins>]
 - 
     [no-undef](http://eslint.org/docs/rules/no-undef.html)
   - [<del>&quot;off&quot;</del>]
@@ -663,7 +703,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-underscore-dangle](http://eslint.org/docs/rules/no-underscore-dangle.html)
   - [<del>&quot;off&quot;</del>]
-  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowAfterThis&quot;:false}</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allow&quot;:[],&quot;allowAfterThis&quot;:false,&quot;allowAfterSuper&quot;:false}</ins>]
 - 
     [no-unexpected-multiline](http://eslint.org/docs/rules/no-unexpected-multiline.html)
   - [<del>&quot;off&quot;</del>]
@@ -675,7 +715,15 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions.html)
   - [<del>&quot;off&quot;</del>]
-  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowShortCircuit&quot;:false,&quot;allowTernary&quot;:false}</ins>]
+  - [<ins>&quot;error&quot;</ins>, <ins>{&quot;allowShortCircuit&quot;:false,&quot;allowTernary&quot;:false,&quot;allowTaggedTemplates&quot;:false}</ins>]
+- 
+    [no-unused-vars](http://eslint.org/docs/rules/no-unused-vars.html)
+  - [&quot;error&quot;, <del>{&quot;vars&quot;:&quot;local&quot;,&quot;args&quot;:&quot;after-used&quot;}</del>]
+  - [&quot;error&quot;, <ins>{&quot;vars&quot;:&quot;all&quot;,&quot;args&quot;:&quot;after-used&quot;,&quot;ignoreRestSiblings&quot;:true}</ins>]
+- 
+    [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define.html)
+  - [&quot;error&quot;]
+  - [&quot;error&quot;, <ins>{&quot;functions&quot;:true,&quot;classes&quot;:true,&quot;variables&quot;:true}</ins>]
 - 
     [no-void](http://eslint.org/docs/rules/no-void.html)
   - [<del>&quot;off&quot;</del>]
@@ -798,7 +846,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [spaced-comment](http://eslint.org/docs/rules/spaced-comment.html)
   - [&quot;error&quot;]
-  - [&quot;error&quot;, <ins>&quot;always&quot;</ins>, <ins>{&quot;line&quot;:{&quot;exceptions&quot;:[&quot;-&quot;,&quot;+&quot;],&quot;markers&quot;:[&quot;&#x3D;&quot;,&quot;!&quot;]},&quot;block&quot;:{&quot;exceptions&quot;:[&quot;-&quot;,&quot;+&quot;],&quot;markers&quot;:[&quot;&#x3D;&quot;,&quot;!&quot;],&quot;balanced&quot;:false}}</ins>]
+  - [&quot;error&quot;, <ins>&quot;always&quot;</ins>, <ins>{&quot;line&quot;:{&quot;exceptions&quot;:[&quot;-&quot;,&quot;+&quot;],&quot;markers&quot;:[&quot;&#x3D;&quot;,&quot;!&quot;]},&quot;block&quot;:{&quot;exceptions&quot;:[&quot;-&quot;,&quot;+&quot;],&quot;markers&quot;:[&quot;&#x3D;&quot;,&quot;!&quot;],&quot;balanced&quot;:true}}</ins>]
 - 
     [valid-typeof](http://eslint.org/docs/rules/valid-typeof.html)
   - [<del>&quot;off&quot;</del>]

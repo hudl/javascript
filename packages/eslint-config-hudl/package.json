@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hudl",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Hudl's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/hudl/javascript/packages/eslint-config-hudl",
   "publishConfig": {
-    "registry": "http://npm.thorhudl.com"
+    "registry": "http://npm-push.hudltools.com"
   },
   "hudl-ci": {
     "buildCommand": null,
