@@ -546,7 +546,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;before&quot;:false,&quot;after&quot;:true}</ins>]
 - 
     [indent](http://eslint.org/docs/rules/indent.html)
-  - [&quot;error&quot;, 2]
+  - [&quot;error&quot;, 2, <del>{&quot;SwitchCase&quot;:1,&quot;VariableDeclarator&quot;:1}</del>]
   - [&quot;error&quot;, 2, <ins>{&quot;SwitchCase&quot;:1,&quot;VariableDeclarator&quot;:1,&quot;outerIIFEBody&quot;:1,&quot;FunctionDeclaration&quot;:{&quot;parameters&quot;:1,&quot;body&quot;:1},&quot;FunctionExpression&quot;:{&quot;parameters&quot;:1,&quot;body&quot;:1}}</ins>]
 - 
     [jsx-quotes](http://eslint.org/docs/rules/jsx-quotes.html)
@@ -809,9 +809,6 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     react/no-is-mounted
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
--     react/no-multi-comp
-  - [&quot;error&quot;]
-  - [&quot;error&quot;, <ins>{&quot;ignoreStateless&quot;:true}</ins>]
 -     react/no-string-refs
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
