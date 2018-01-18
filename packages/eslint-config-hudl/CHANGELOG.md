@@ -1,3 +1,9 @@
+
+6.0.0
+- [breaking]
+    + Update Switch Case indent
+	+ Update Multi react components to ignore stateless
+
 ### 5.0.1
 - Update references to http://npm.thorhudl.com to reference new Nexus server.
 
