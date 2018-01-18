@@ -1,8 +1,7 @@
 
-6.0.0
-- [breaking]
-    + Update Switch Case indent
-	+ Update Multi react components to ignore stateless
+### 6.0.0 / 2018-01-18
+- [breaking] Updated indentation for switch statements
+- [minor] allow multiple stateless react components in a single file
 
 ### 5.0.1
 - Update references to http://npm.thorhudl.com to reference new Nexus server.
