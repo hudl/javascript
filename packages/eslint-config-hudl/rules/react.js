@@ -108,7 +108,7 @@ module.exports = {
     'react/no-is-mounted': 'off',
     // Prevent multiple component definition per file
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-    'react/no-multi-comp': ['error'],
+    'react/no-multi-comp': ['error', { 'ignoreStateless': true }],
     // Prevent usage of setState
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
     'react/no-set-state': 'off',
@@ -141,5 +141,6 @@ module.exports = {
     // Prevent missing parentheses around multilines JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
     'react/jsx-wrap-multilines': ['error'],
+    'react/wrap-multilines': ['error'],
   },
 };

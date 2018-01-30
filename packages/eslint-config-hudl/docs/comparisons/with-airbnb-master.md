@@ -447,8 +447,6 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;off&quot;</ins>, <ins>{&quot;ignoreCase&quot;:true,&quot;callbacksLast&quot;:false,&quot;requiredFirst&quot;:false}</ins>]
 -     react/style-prop-object
   - [<ins>&quot;error&quot;</ins>]
--     react/wrap-multilines
-  - [<ins>&quot;off&quot;</ins>]
 - 
     [require-await](http://eslint.org/docs/rules/require-await.html)
   - [<ins>&quot;off&quot;</ins>]
@@ -546,7 +544,7 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
   - [<ins>&quot;error&quot;</ins>, <ins>{&quot;before&quot;:false,&quot;after&quot;:true}</ins>]
 - 
     [indent](http://eslint.org/docs/rules/indent.html)
-  - [&quot;error&quot;, 2]
+  - [&quot;error&quot;, 2, <del>{&quot;SwitchCase&quot;:1,&quot;VariableDeclarator&quot;:1}</del>]
   - [&quot;error&quot;, 2, <ins>{&quot;SwitchCase&quot;:1,&quot;VariableDeclarator&quot;:1,&quot;outerIIFEBody&quot;:1,&quot;FunctionDeclaration&quot;:{&quot;parameters&quot;:1,&quot;body&quot;:1},&quot;FunctionExpression&quot;:{&quot;parameters&quot;:1,&quot;body&quot;:1}}</ins>]
 - 
     [jsx-quotes](http://eslint.org/docs/rules/jsx-quotes.html)
@@ -809,9 +807,6 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     react/no-is-mounted
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
--     react/no-multi-comp
-  - [&quot;error&quot;]
-  - [&quot;error&quot;, <ins>{&quot;ignoreStateless&quot;:true}</ins>]
 -     react/no-string-refs
   - [<del>&quot;off&quot;</del>]
   - [<ins>&quot;error&quot;</ins>]
@@ -827,6 +822,9 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     react/sort-comp
   - [&quot;error&quot;]
   - [&quot;error&quot;, <ins>{&quot;order&quot;:[&quot;static-methods&quot;,&quot;lifecycle&quot;,&quot;/^on.+$/&quot;,&quot;/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/&quot;,&quot;everything-else&quot;,&quot;/^render.+$/&quot;,&quot;render&quot;]}</ins>]
+-     react/wrap-multilines
+  - [<del>&quot;error&quot;</del>]
+  - [<ins>&quot;off&quot;</ins>]
 - 
     [require-yield](http://eslint.org/docs/rules/require-yield.html)
   - [<del>&quot;off&quot;</del>]
