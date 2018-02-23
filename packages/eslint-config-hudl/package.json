@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hudl",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Hudl's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -47,10 +47,7 @@
   },
   "tasksConfig": {
     "test": {
-      "src": [
-        "lib/**/*.js",
-        "!**/__specs__/**/*.js"
-      ],
+      "src": ["lib/**/*.js", "!**/__specs__/**/*.js"],
       "tests": "**/*-specs.js",
       "setup": "./test/setup",
       "coverageThresholds": {
