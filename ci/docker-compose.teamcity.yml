@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  eslint-config-hudl-build:
+  javascript-build:
     environment:
       HUDL_CI_NPM_PUBLISH_URL: http://npm-push.hudltools.com
     ulimits:
