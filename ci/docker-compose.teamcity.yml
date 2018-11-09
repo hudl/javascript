@@ -1,0 +1,23 @@
+version: '3.2'
+services:
+  javascript-build:
+    environment:
+      HUDL_CI_NPM_PUBLISH_URL: http://npm-push.hudltools.com
+    ulimits:
+      nofile:
+        soft: 10240
+        hard: 10240
+    build:
+      context: ..
+      args:
+        HudlCiToolsTagName: "${HudlCiToolsTagName}"
+        npmRegistryUrl: "${npmRegistryUrl}"
+        teamcityBuildBranch: "${teamcityBuildBranch}"
+        buildNumber: "${buildNumber}"
+        teamCityNpmPassword: "${teamCityNpmPassword}"
+        teamCityNpmAuthToken: "${teamCityNpmAuthToken}"
+    volumes:
+      - "..:/app"
+      - "node_modules:/app/packages/eslint-config-hudl/node_modules"
+volumes:
+  node_modules:
