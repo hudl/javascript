@@ -1,3 +1,9 @@
+### 7.0.0
+
+* [breaking] Require ESLint 4 or 5
+* [minor] Add and update several React rules
+* [minor] Build with Docker
+
 ### 6.0.1 / 2018-02-23
 
 * [bug] Remove react/wrap-multilines

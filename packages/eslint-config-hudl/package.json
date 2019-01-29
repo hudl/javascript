@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hudl",
-  "version": "6.0.1",
+  "version": "7.0.0",
   "description": "Hudl's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
@@ -47,7 +47,10 @@
   },
   "tasksConfig": {
     "test": {
-      "src": ["lib/**/*.js", "!**/__specs__/**/*.js"],
+      "src": [
+        "lib/**/*.js",
+        "!**/__specs__/**/*.js"
+      ],
       "tests": "**/*-specs.js",
       "setup": "./test/setup",
       "coverageThresholds": {
@@ -65,14 +68,14 @@
     "deep-diff": "^0.3.3",
     "deep-property": "^1.1.0",
     "dir-compare": "0.0.2",
-    "eslint": "^3.15.0",
+    "eslint": "^4.19.1 || ^5.6.1",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "eslint-teamcity": "^1.0.0",
     "fs-extra": "^0.26.5",
     "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.1",
+    "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.0",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
@@ -90,6 +93,6 @@
     "tmp": "0.0.28"
   },
   "peerDependencies": {
-    "eslint": "^3.0.0"
+    "eslint": "^4.19.1 || ^5.9.0"
   }
 }

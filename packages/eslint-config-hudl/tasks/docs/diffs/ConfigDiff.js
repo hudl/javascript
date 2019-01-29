@@ -5,6 +5,7 @@ const fs = require('fs-extra');
 const _ = require('lodash');
 const tmp = require('tmp');
 const Config = require('eslint/lib/config');
+const Linter = require('eslint/lib/linter');
 const diff = require('deep-diff').diff;
 const deepProperty = require('deep-property');
 const slash = require('slash');
@@ -334,7 +335,7 @@ ConfigDiff.prototype._loadConfig = function(configFilePath) {
   const config = new Config({
     configFile: configFilePath,
     useEslintrc: false,
-  }).getConfig();
+  }, new Linter()).getConfig();
 
   // eslint resolves the parser option into an absolute file path. This isn't very helpful
   // to us. So we have to manually 'unresolve' it back to a module name if its a file path.

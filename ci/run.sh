@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex
+set -exuo pipefail
 
 cp -r /app /app-copy
 cd /app-copy/packages/eslint-config-hudl
