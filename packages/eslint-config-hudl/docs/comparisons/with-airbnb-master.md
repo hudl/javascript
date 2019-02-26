@@ -81,11 +81,11 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 -     plugins.0
   - [&quot;react&quot;]
   - [&quot;import&quot;]
+-     plugins.1
+  - [&quot;react-hooks&quot;]
+  - [&quot;react&quot;]
 -     plugins
-  - [[&quot;react&quot;]]
-  - [[&quot;import&quot;,&quot;react&quot;,&quot;jsx-a11y&quot;]]
--     plugins
-  - [[&quot;react&quot;]]
+  - [[&quot;react&quot;,&quot;react-hooks&quot;]]
   - [[&quot;import&quot;,&quot;react&quot;,&quot;jsx-a11y&quot;]]
 -     settings.import/extensions
   - [<ins>[&quot;.js&quot;,&quot;.mjs&quot;,&quot;.jsx&quot;]</ins>]
@@ -518,6 +518,8 @@ should be added to the list in [the diff task](../../tasks/docs/diffs/diffs-to-r
 - 
     [no-empty-label](http://eslint.org/docs/rules/no-empty-label.html)
   - [<del>&quot;off&quot;</del>]
+-     react-hooks/rules-of-hooks
+  - [<del>&quot;error&quot;</del>]
 
 #### Edited rules
 - 

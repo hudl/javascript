@@ -19,7 +19,7 @@ gulp.task('pre-test', function() {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('run-test', ['pre-test'], function() {
+gulp.task('run-test', gulp.series(['pre-test'], function() {
   let stream = gulp.src(config.tests, {
     read: false,
   })
@@ -41,16 +41,16 @@ gulp.task('run-test', ['pre-test'], function() {
     }));
   }
   return stream;
-});
+}));
 
-gulp.task('test', ['run-test'], function() {
+gulp.task('test', gulp.series(['run-test'], function() {
   // Copy test coverage HTML report to more generic name for TeamCity
   return new Promise(function(resolve) {
     fs.move(path.join(testCoverageDir, 'lcov-report/'), './reports/tabs/test-coverage', resolve);
   }).then(function() {
     fs.removeSync(testCoverageDir);
   });
-});
+}));
 
 // Task for running tests without code coverage; intended only for getting
 // more accurate line numbers for debugging test errors
