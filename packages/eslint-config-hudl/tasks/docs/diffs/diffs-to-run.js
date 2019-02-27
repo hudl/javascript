@@ -2,10 +2,10 @@ module.exports = [
   {
     // 'https://raw.githubusercontent.com/hudl/javascript/master/linters/.eslintrc',
 
-    title: 'vs Airbnb v14.1.0',
+    title: 'vs Airbnb v17.1.0',
     outputName: 'with-airbnb-master',
     base: require.resolve('../../../index.js'),
-    comparison: 'eslint-config-airbnb@14.1.0',
+    comparison: 'eslint-config-airbnb@17.1.0',
     knownDifferences: {
       // Known rule differences
       rules: {

@@ -9,6 +9,6 @@ export teamcityBuildBranch="branch-name"
 export buildNumber="1234"
 export teamCityNpmPassword="hello"
 export teamCityNpmAuthToken="world"
-export service="eslint-config-hudl"
+export service="javascript"
 
- ./teamcity-build.sh
+./teamcity-build.sh

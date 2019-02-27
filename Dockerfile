@@ -1,4 +1,4 @@
-FROM node:10.12.0
+FROM node:10.15.0
 
 ARG HudlCiToolsTagName
 ARG npmRegistryUrl
@@ -8,18 +8,12 @@ ARG npmPackageDir
 ARG teamCityNpmPassword
 ARG teamCityNpmAuthToken
 
-RUN npm i -g hudl-ci-tools@${HudlCiToolsTagName} --registry=${npmRegistryUrl}
-
-# install yarn 1.11.1
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.11.1
-
-
+# The 10.15.0 image includes Yarn 1.13.0
 RUN yarn config set registry "${npmRegistryUrl}"
+RUN yarn global add hudl-ci-tools@${HudlCiToolsTagName}
 
 ENTRYPOINT [ "/bin/bash", "/app/ci/run.sh" ]
 
-ENV HudlCiToolsTagName="${HudlCiToolsTagName}"
-ENV npmRegistryUrl="${npmRegistryUrl}"
 ENV teamcityBuildBranch="${teamcityBuildBranch}"
 ENV buildNumber="${buildNumber}"
 ENV teamCityNpmPassword="${teamCityNpmPassword}"

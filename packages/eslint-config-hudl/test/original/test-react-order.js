@@ -9,7 +9,8 @@ const cli = new CLIEngine({
 
   // This rule fails when executing on text.
   rules: {
-    indent: 0,
+    'indent': 0,
+    'padded-blocks': 0,
   },
 });
 

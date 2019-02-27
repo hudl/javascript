@@ -15,6 +15,10 @@ import Feedback from '../Feedback';
 import Footer from '../Footer';
 
 class App extends Component {
+  static defaultProps = {
+    context: undefined,
+    error: undefined,
+  }
 
   static propTypes = {
     context: PropTypes.shape({
@@ -60,9 +64,8 @@ class App extends Component {
         <Feedback />
         <Footer />
       </div>
-      ) : this.props.children;
+    ) : this.props.children;
   }
-
 }
 
 export default App;
