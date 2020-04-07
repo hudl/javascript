@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hudl",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "description": "Hudl's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {

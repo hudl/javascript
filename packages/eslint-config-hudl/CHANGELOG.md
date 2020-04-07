@@ -1,3 +1,8 @@
+### 7.1.0
+
+* [minor] Allow UNSAFE lifecycle methods in camelcase and react/sort-comp
+* [minor] Build with Docker
+
 ### 7.0.0
 
 * [breaking] Require ESLint 4 or 5

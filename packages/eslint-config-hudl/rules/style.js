@@ -9,6 +9,7 @@ module.exports = {
     // require camel case names
     'camelcase': ['error', {
       'properties': 'never',
+      'allow': ["^UNSAFE_"],
     }],
     // enforce spacing before and after comma
     'comma-spacing': ['error', {
