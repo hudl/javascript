@@ -40,7 +40,7 @@
   },
   "hudl-ci": {
     "buildCommand": null,
-    "lintCommand": "./node_modules/.bin/gulp lint",
+    "lintCommand": "npm run lint",
     "testCommand": "npm run test"
   },
   "tasksConfig": {
