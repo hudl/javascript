@@ -1,6 +1,5 @@
 /* eslint-disable */
 module.exports = {
-  parser: 'babel-eslint',
   plugins: [
     'react',
     'react-hooks'
@@ -95,7 +94,7 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
     'react/jsx-no-bind': ['warn', {
       ignoreRefs: true,
-      allowArrowFunctions: false,
+      allowArrowFunctions: true,
       allowFunctions: false,
       allowBind: false,
       ignoreDOMComponents: true,
