@@ -1,3 +1,7 @@
+# 🚨 NOTICE 🚨
+
+**🚨 This package has been deprecated in favor of https://github.com/hudl/hudl-frontends/tree/main/config/config-eslint.  Do not make any more changes to this package! 🚨**
+
 # eslint-config-hudl
 
 This package provides Hudl's .eslintrc as an extensible shared config.
