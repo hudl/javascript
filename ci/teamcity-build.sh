@@ -1,7 +1,2 @@
 #!/usr/bin/env bash
-set -ex
-
-cd "$( dirname "${BASH_SOURCE[0]}" )"
-
-docker-compose -f docker-compose.yml build  $service-build
-docker-compose -f docker-compose.yml run --rm  $service-build
+echo "This package is deprecated in this repo - please use https://github.com/hudl/hudl-frontends/tree/main/config/config-eslint"
